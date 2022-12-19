@@ -12,7 +12,7 @@ class App extends Component {
       <Layout>
         <Routes>
           <Route path='/quiz:id' element={<Quiz/>}/>
-          <Route path='/auth' element={<Auth/>}/>
+          <Route path='/quiz' element={<Auth/>}/>
           <Route path='/quiz-creator' element={<QuizCreator/>}/>
           <Route path='/' element={<QuizList/>}/>
         </Routes>

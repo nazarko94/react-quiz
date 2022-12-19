@@ -6,7 +6,7 @@ import Backdrop from "../../UI/Button/Backdrop/Backdrop";
 
 const links = [
   {to: '/', label: 'List'},
-  {to: '/auth', label: 'Signup'},
+  {to: '/quiz', label: 'Signup'},
   {to: '/quiz-creator', label: 'Create test'},
 ];
 
