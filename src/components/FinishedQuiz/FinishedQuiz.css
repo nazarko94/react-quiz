@@ -17,10 +17,10 @@
   margin-left: 10px;
 }
 
-.finishedQuiz .success {
+.fa-check.success {
   color: rgba(161, 240, 69, .7);
 }
 
-.finishedQuiz .error {
+.fa-times.error {
   color: rgba(240, 87, 108, .7);
 }

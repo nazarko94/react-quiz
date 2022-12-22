@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import classNames from "classnames";
 import './Drawer.css';
 import { NavLink } from "react-router-dom";
-import Backdrop from "../../UI/Button/Backdrop/Backdrop";
+import Backdrop from "../../UI/Backdrop/Backdrop";
 
 const links = [
   {to: '/', label: 'List', exact: true},
@@ -40,7 +40,7 @@ class Drawer extends Component {
     const cls = [classNames('drawer')];
 
     if(!this.props.isOpen) {
-      cls.push(classNames, 'close');
+      cls.push(classNames('close'));
     }
 
     return (
