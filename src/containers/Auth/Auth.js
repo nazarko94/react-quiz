@@ -3,6 +3,7 @@ import './Auth.css';
 import classNames from 'classnames';
 import Input from '../../components/UI/Input/Input';
 import Button from '../../components/UI/Button/Button';
+import axios from 'axios';
 
 const validateEmail = (email) => {
   return String(email)
@@ -44,12 +45,32 @@ export default class Auth extends Component {
     }
   }
 
-  loginHandler = () => {
-
+  loginHandler = async () => {
+    const authData = {
+      email: this.state.formControls.email.value,
+      password: this.state.formControls.password.value,
+      returnSecureToken: true,
+    }
+    try {
+      const response = await axios.post('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBxX8a2GkG5G3uLLMUTxRQBlFA3m-CAMis', authData);
+      console.log(response.data);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
-  registerHandler = () => {
-
+  registerHandler = async () => {
+    const authData = {
+      email: this.state.formControls.email.value,
+      password: this.state.formControls.password.value,
+      returnSecureToken: true,
+    }
+    try {
+      const response = await axios.post('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBxX8a2GkG5G3uLLMUTxRQBlFA3m-CAMis', authData);
+      console.log(response.data);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   submitHandler = event => {
@@ -122,7 +143,7 @@ export default class Auth extends Component {
     return (
       <div className={classNames('auth')}>
         <div>
-          <h1>Authrization</h1>
+          <h1>Authorization</h1>
 
           <form onSubmit={this.submitHandler} className={classNames('authForm')}>
 
