@@ -143,7 +143,7 @@ class Auth extends Component {
               onClick={this.loginHandler}
               disabled={!this.state.isFormValid}
             >
-              Sign in
+              Login
             </Button>
 
             <Button
